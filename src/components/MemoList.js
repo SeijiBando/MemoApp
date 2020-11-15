@@ -4,10 +4,10 @@ import { StyleSheet, View, Text } from 'react-native';
 const styles = StyleSheet.create({
   memoList: {
     width: '100%',
-    flex: 1,
   },
   memoListItem: {
-    padding: 16,
+    padding: 10,
+    margin: 0,
     borderBottomWidth: 1,
     borderBottomColor: '#FFFFFF',
   },
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
   },
   memoDate: {
     fontSize: 12,
+    marginBottom: 8,
   },
 });
 

@@ -1,16 +1,15 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import MemoList from './src/components/MemoList';
+import MemoListScreen from './src/screens/MemoListScreen';
 import Appbar from './src/components/Appbar';
-import CircleButton from './src/elements/CircleButton';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#808080',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     paddingTop: 78,
   },
 });
@@ -20,8 +19,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Appbar />
-        <MemoList />
-        <CircleButton>+</CircleButton>
+        <MemoListScreen />
       </View>
     );
   }
