@@ -9,17 +9,31 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   memoHeader: {
-    height: 200,
+    height: 100,
     backgroundColor: '#17313C',
+    justifyContent: 'center',
+    padding: 10,
   },
   memoHeaderTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    marginBottom: 4,
   },
   memoHeaderDate: {
     fontSize: 12,
     color: '#fff',
+  },
+  memoContent: {
+    paddingTop: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    backgroundColor: '#ddd',
+    flex: 1,
+  },
+  editButton: {
+    top: 75,
   },
 });
 
@@ -29,8 +43,10 @@ class MemoDetailScreen extends React.Component {
       <View style={styles.container}>
         <View>
           <View style={styles.memoHeader}>
-            <Text style={styles.memoGeaderTitle}>講座のアイデア</Text>
-            <Text style={styles.memoHeaderDate}>2017/12/12</Text>
+            <View>
+              <Text style={styles.memoHeaderTitle}>講座のアイデア</Text>
+              <Text style={styles.memoHeaderDate}>2017/12/12</Text>
+            </View>
           </View>
         </View>
 
@@ -40,7 +56,7 @@ class MemoDetailScreen extends React.Component {
           </Text>
         </View>
 
-        <CircleButton>+</CircleButton>
+        <CircleButton color="white" style={styles.editButton}>+</CircleButton>
       </View>
     );
   }

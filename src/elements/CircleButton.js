@@ -8,22 +8,30 @@ const styles = StyleSheet.create({
     right: 32,
     width: 48,
     height: 48,
-    backgroundColor: '#008b8b',
     borderRadius: 24,
     justifyContent: 'center',
     alignItems: 'center',
   },
   circleButtonTitle: {
     fontSize: 32,
-    lineHeight: 30,
+    lineHeight: 34,
   },
 });
 
 class CircleButton extends React.Component {
   render() {
+    const { style, color } = this.props;
+
+    let bgColor = '#008b8b';
+    let textColor = '#fff';
+
+    if (color === 'white') {
+      bgColor = '#fff';
+      textColor = '#008b8b';
+    }
     return (
-      <View style={styles.circleButton}>
-        <Text style={styles.circleButtonTitle}>
+      <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
+        <Text style={[styles.circleButtonTitle, { color: textColor }]}>
           {this.props.children}
         </Text>
       </View>
